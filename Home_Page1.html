@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="eg">
+
+<head>
+
+    <title>Home Page 404 Coffee</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="CSS_Styles1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+
+    <style>
+
+        h2 {
+            font: bold 2.3em Lobster, Verdana, sans-serif;
+            text-shadow: -0.04em 0 #e2e2e2, 0 0.04em #e2e2e2, 0.04em 0 #e2e2e2, 0 -0.04em #e2e2e2;
+
+            color: #4a3020;
+            display: inline-block;
+        }
+
+        .column1 {
+            box-sizing: border-box;
+
+            float: left;
+            width: 33.33%;
+            padding-left: 0.9em;
+            padding: 0.9em;
+            border-color: #e2e2e2 #4A3020;
+            border-width: 1.1em;
+            color: black;
+            border-style: double;
+            border-radius: 11%;
+            background: url("matt-steele-1392296-unsplash.jpg");
+            object-fit: fill;
+            font-family: Lobster, sans-serif;
+
+            filter: grayscale(60%);
+
+        }
+
+        .column2 {
+            box-sizing: border-box;
+
+            float: left;
+            width: 33.33%;
+            padding: 0.9em;
+            border-color: #e2e2e2 #4A3020;
+            border-width: 1.1em;
+            color: black;
+            border-style: double;
+            border-radius: 11%;
+            background: url("gabriel-santos-1510754-unsplash.jpg");
+            object-fit: fill;
+            font-family: Lobster, sans-serif;
+
+            filter: grayscale(60%);
+
+        }
+
+        .column3 {
+            box-sizing: border-box;
+
+            float: left;
+            width: 33.33%;
+            padding: 0.9em;
+            border-color: #e2e2e2 #4A3020;
+            border-width: 1.1em;
+            color: black;
+            border-style: double;
+            border-radius: 11%;
+            background: url("takanori-nishikawa-1342007-unsplash.jpg");
+            object-fit: fill;
+            font-family: Lobster, sans-serif;
+
+            filter: grayscale(60%);
+
+        }
+
+        .text-center {
+            text-align: center;
+
+
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+    </style>
+</head>
+
+<body onLoad=startTime()>
+
+<div id="page">
+    <div class="header">
+
+        <h2>Days until Coffee day:</h2><br/>
+        <p id="coffeeDayClock"></p>
+
+        <script>
+            <!--
+            //   CoffeeDay;
+            //  Date;
+            // we;
+            //count;
+            //to; -->
+            var countDownDate = new Date("October 1, 2019 ").getTime();
+
+            <!-- Update seconds -->
+            var sec = setInterval(function () {
+
+                <!-- Get today's date and time -->
+                var now = new Date().getTime();
+
+                <!-- Difference between today and CoffeeDay -->
+                var difference = countDownDate - now;
+
+                <!-- calculations for days, hours, minutes, and seconds -->
+                var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((difference % (1000 * 60)) / (1000));
+
+                <!-- Output to the coffeeDayClock ID -->
+                document.getElementById("coffeeDayClock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            }, 1000);
+        </script>
+        <br/>
+        <div id="systemClock"></div>
+    </div>
+
+    <div id="navigation">
+        <a href=#navimage><img alt="" id="navicon" src="student_cafe3.png" style="width:80px; height:80px"></a>
+        <h2 class="title-font">404 Coffee Place</h2>
+        <a href="menu_page.html">
+            <button class="button" type="button"> Menu</button>
+        </a>
+        <a href="#ourstory">
+            <button class="active-button" type="button">Our Story!</button>
+        </a>
+        <a href="https://www.starbucks.ca/">
+            <button class="button" type="button">Subscribe</button>
+        </a>
+    </div>
+
+
+    <!--IMAGE CAROUSEL-->
+
+    <div class="slider">
+        <input checked="checked" class="radio" id="radio01" name="radio" type="radio">
+        <input class="radio" id="radio02" name="radio" type="radio">
+        <input class="radio" id="radio03" name="radio" type="radio">
+        <input class="radio" id="radio04" name="radio" type="radio">
+        <input class="radio" id="radio05" name="radio" type="radio">
+        <div class="item" id="item01"><img alt="slide-image-01" id="caroimage1"
+                                           src="charisse-kenion-314533-unsplash.jpg"></div>
+        <div class="item" id="item02"><img alt="slide-image-02" id="caroImage2" src="crew-88126-unsplash.jpg"></div>
+        <div class="item" id="item03"><img alt="slide-image-03" id="caroImage3" src="nathan-dumlao-264380-unsplash.jpg">
+        </div>
+        <div class="item" id="item04"><img alt="slide-image-04" id="caroImage4" src="mike-kenneally-46284-unsplash.jpg">
+        </div>
+        <div class="item" id="item05"><img alt="slide-image-05" id="caroImage5" src="kari-shea-188474-unsplash.jpg">
+        </div>
+        <label class="label" for="radio01" id="label01"></label>
+        <label class="label" for="radio02" id="label02"></label>
+        <label class="label" for="radio03" id="label03"></label>
+        <label class="label" for="radio04" id="label04"></label>
+        <label class="label" for="radio05" id="label05"></label>
+        <span class="indicator"><label for="radio01" id="indicator01"></label></span>
+        <span class="indicator"><label for="radio02" id="indicator02"></label></span>
+        <span class="indicator"><label for="radio03" id="indicator03"></label></span>
+        <span class="indicator"><label for="radio04" id="indicator04"></label></span>
+        <span class="indicator"><label for="radio05" id="indicator05"></label></span>
+    </div>
+
+
+    <div class="row">
+        <div class="column1">
+            <div class="text-center">
+                <ul>
+                    <li>
+                        <h2 class="title2">Our Focus!</h2>
+                        <p>some text
+                        </p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="column2">
+            <ul>
+                <li>
+                    <h2 class="title2">Our Values!</h2>
+                    <p>some text
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="column3">
+            <div class="text-center">
+                <ul>
+                    <li>
+                        <h2 class="title2">Coffee Day Extravaganza!</h2>
+                        </p >some text
+                        <p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script>
+    window.onscroll = function () {
+        myFunction()
+    };
+
+    var navbar = document.getElementById("navigation");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    function startTime() {
+        var today = new Date();
+        var hour = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+        min = checkTime(min);
+        sec = checkTime(sec);
+
+        var weekdayArray = ["Monday", "Tuesday", "Wednesday", "Thursday, Friday", "Saturday", "Sunday"];
+        var monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var weekday = today.getDay() - 1;
+        var monthDay = today.getMonth();
+        var date = "";
+
+        var dateSuffix;
+
+        switch (today.getDate) {
+            case 1: {
+                dateSuffix = today.getDate() + "st";
+                break;
+            }
+            case 21: {
+                dateSuffix = today.getDate() + "st";
+                break;
+            }
+            case 31: {
+                dateSuffix = today.getDate() + "st";
+                break;
+            }
+            case 2: {
+                dateSuffix = today.getDate() + "nd";
+                break;
+            }
+            case  22: {
+                dateSuffix = today.getDate() + "nd";
+                break;
+            }
+            case 3: {
+                dateSuffix = today.getDate() + "rd";
+                break;
+            }
+            case 23: {
+                dateSuffix = today.getDate() + "rd";
+                break;
+            }
+            default: {
+
+                dateSuffix = today.getDate() + "th";
+                break;
+
+            }
+
+        }
+
+        document.getElementById('systemClock').innerHTML = "Today is: " + weekdayArray[weekday] + ", " + monthArray[monthDay] + ", the " + dateSuffix + "!";
+        "Hr: " + hour + " Min: " + min + " Sec: " + sec + " Date: ";
+        var today = setTimeout(startTime, 500);
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }
+        // add zero in front of numbers < 10
+        return i;
+    }
+</script>
+
+
+</body>
+
+</html>

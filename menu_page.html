@@ -1,0 +1,337 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>404 Cafe</title>
+    <meta content="The HTML5 Herald" name="description">
+    <meta content="SitePoint" name="author">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="CSS_Styles1.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0">-->
+
+    <style>
+
+
+        ul {
+            list-style-type: none;
+
+        }
+
+        h3 {
+            text-shadow: -0.04em 0 #e2e2e2, 0 0.04em #e2e2e2, 0.04em 0 #e2e2e2, 0 -0.04em #e2e2e2;
+
+            color: #4a3020;
+            display: inline-block;
+
+
+        }
+
+        li img {
+            float: top;
+            margin: 0 1em 0 0;
+            height: 100%;
+            width: 75%;
+            border: 0.2em solid #557D90;
+            border-radius: 0.5em;
+        }
+
+        li p {
+            font: bold 1em/1.2 Raleway, Times New Roman, serif;
+            color: #e2e2e2;
+            text-shadow: -0.04em 0 #4a3020, 0 0.04em #4a3020, 0.04em 0 #4a3020, 0 -0.04em #4a3020;
+        }
+
+        li {
+            padding: 0.6em;
+            overflow: auto;
+            border-color: #4A3020;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h2 {
+            font: bold 2.3em Lobster, Verdana, sans-serif;
+            text-shadow: -0.04em 0 #e2e2e2, 0 0.04em #e2e2e2, 0.04em 0 #e2e2e2, 0 -0.04em #e2e2e2;
+
+            color: #4a3020;
+            display: inline-block;
+        }
+
+        body {
+            background: url("nordwood-themes-483517-unsplash.jpg");
+        }
+
+
+        .column1 {
+            float: left;
+            width: 33.33%;
+            padding: 0.9em;
+            border-color: #e2e2e2 #4A3020;
+            border-width: 1.1em;
+            color: black;
+            border-style: double;
+            border-radius: 11%;
+            background: url("martin-211-unsplash.jpg");
+            object-fit: fill;
+            font-family: Lobster, sans-serif;
+
+            filter: grayscale(60%);
+
+        }
+
+        .column2 {
+            float: right;
+            width: 33.33%;
+            padding: 0.9em;
+            border-color: #e2e2e2 #4A3020;
+            border-width: 1.1em;
+            color: black;
+            border-style: double;
+            border-radius: 11%;
+            background: url("martin-211-unsplash.jpg");
+            object-fit: fill;
+            font-family: Lobster, sans-serif;
+
+            filter: grayscale(60%);
+
+        }
+
+        .middle {
+            background: url("nathan-dumlao-623124-unsplash.jpg");
+        }
+
+        .text-center {
+            text-align: center;
+
+
+        }
+
+
+        #personalInfo {
+            font-family: Raleway, sans-serif;
+            color: #e2e2e2;
+            font-weight: bold;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        hr {
+            color: #e2e2e2;
+        }
+    </style>
+</head>
+
+<body onload=startTime()>
+
+<div id="page">
+    <div class="header">
+        <h2>Days until coffee day</h2><br>
+        <p id="coffeeDayClock"></p>
+
+        <script>
+            <!--
+            //CoffeeDay;
+            //Date;
+            //we;
+            //count;
+            //to; -->
+            var countDownDate = new Date("October 1, 2019 ").getTime();
+            <!-- Update seconds -->
+            var sec = setInterval(function () {
+                <!-- Get today's date and time -->
+                var now = new Date().getTime();
+                <!-- Difference between today and CoffeeDay -->
+                var difference = countDownDate - now;
+                <!-- calculations for days, hours, minutes, and seconds -->
+                var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((difference % (1000 * 60)) / (1000));
+                <!-- Output to the coffeeDayClock ID -->
+                document.getElementById("coffeeDayClock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            }, 1000);
+        </script>
+        <br>
+        <div id="systemClock"></div>
+    </div>
+
+    <div id="navigation">
+        <a href=#navimage><img alt="" id="navicon" src="student_cafe3.png"></a>
+        <h2 class="title-font">404 Coffee Place</h2>
+        <a href="menu_page.html">
+            <button class="active-button" type="button">Menu</button>
+        </a>
+        <a href="Home_Page1.html">
+            <button class="button" type="button">Our Story!</button>
+        </a>
+        <a href="https://www.starbucks.ca/">
+            <button class="button" type="button">Subscribe</button>
+        </a>
+    </div>
+
+    <div class="row">
+        <div class="column1">
+            <div class="text-center">
+                <h2>Sandwiches</h2>
+                <hr>
+                <hr>
+                <ul>
+                    <li>
+                        <img alt="Egg and Tomato" src="eiliv-sonas-aceron-1095887-unsplash.jpg"/><br>
+                        <h3>Egg and Tomato</h3>
+                        <p>Tomato and Egg on whole wheat bread</p>
+                        <hr>
+                    </li>
+
+
+                    <li>
+                        <img alt="Club" src="eaters-collective-197218-unsplash.jpg"/><br>
+                        <h3>Club</h3>
+                        <p>Lorem ipsum dolor sit amet...</p>
+                    </li>
+                    <hr>
+
+                    <li>
+                        <img alt="Portabello Tomato" src="hans-vivek-368747-unsplash.jpg"/><br>
+                        <h3>Portabello Tomato Sandwich</h3>
+                        <p>Lorem ipsum dolor sit amet...</p>
+                        <hr>
+                    </li>
+
+                    <li>
+                        <img alt="Grilled Cheese" src="pixzolo-photography-699069-unsplash.jpg"/><br>
+                        <h3>Grilled Cheese</h3>
+                        <p>Chedder and mozzarella on grilled sourdough</p>
+                        <hr>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--  <div class="column middle">
+              <ul>
+                  <li>
+                      <h2 class
+                      ="title2">Column 2</h2>
+                      <p id="personalInfo">some text
+                      <p>
+                  </li>
+              </ul>
+          </div>-->
+        <div class="column2">
+            <div class="text-center">
+                <ul><h2>Drinks</h2>
+                    <hr>
+                    <hr>
+                    <li>
+                        <img src="kristian-angelo-1414347-unsplash.jpg"/><br>
+                        <h3>Vanilla Late</h3>
+                        <p>This cafe staple is made up of our signature espresso, creamy steamed milk, and french
+                            vanilla syrup.</p>
+                    </li>
+                    <hr>
+
+                    <li>
+                        <img src="kari-shea-188474-unsplash.jpg"/><br>
+                        <h3>Classic Mocha</h3>
+                        <p>Our mocha is composed of our signature espresso, creamy steamed milk, all mixed with half a
+                            cup of chocolate milk</p>
+                    </li>
+                    <li>
+                        <img src="jason-leung-511996-unsplash.jpg"/><br>
+                        <h3>Classic Matcha</h3>
+                        <p>Our matcha is made of freshly stone-ground green tea leaves with methods that date back to
+                            the Tang dynasty</p><br>
+                        <hr>
+                    </li>
+
+
+                    <li>
+                        <img alt="Black Coffee" src="daniel-norris-1404915-unsplash.jpg"/><br>
+                        <h3>Americana coffee</h3>
+                        <p>Smooth Arabica that is sure to keep you coding!</p>
+                        <hr>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    window.onscroll = function () {
+        myFunction()
+    };
+    var navbar = document.getElementById("navigation");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    function startTime() {
+        var today = new Date();
+        var hour = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+        min = checkTime(min);
+        sec = checkTime(sec);
+        var weekdayArray = ["Monday", "Tuesday", "Wednesday", "Thursday, Friday", "Saturday", "Sunday"];
+        var monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var weekday = today.getDay() - 1;
+        var monthDay = today.getMonth();
+        var date = "";
+        var dateSuffix;
+        switch (today.getDate) {
+            case 1, 21, 31: {
+                dateSuffix = today.getDate() + "st";
+                break;
+            }
+            case 2: {
+                dateSuffix = today.getDate() + "nd";
+                break;
+            }
+            case "22": {
+                dateSuffix = today.getDate() + "nd";
+                break;
+            }
+            case 3, 23: {
+                today.getDate() + "rd";
+                break;
+            }
+            default: {
+                dateSuffix = today.getDate() + "th";
+                break;
+            }
+        }
+        document.getElementById('systemClock').innerHTML = "Today is: " + weekdayArray[weekday] + ", " + monthArray[monthDay] + ", the " + dateSuffix + "!";
+        "Hr: " + hour + " " + "Min: " + min + " " + "Sec: " + sec + " Date: ";
+        var today = setTimeout(startTime, 500);
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }
+        // add zero in front of numbers < 10
+        return i;
+    }
+</script>
+</body>
+
+</html>

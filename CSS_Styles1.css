@@ -1,0 +1,355 @@
+body {
+    background: url("nordwood-themes-483517-unsplash.jpg");
+    margin: 0;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    padding: 10% 15%;
+    color: #f0cf91;
+    background: #557d90;
+}
+
+.item {
+
+    object-fit: contain;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+}
+
+#coffeeDayClock {
+
+    /* Base Styles*/
+    /*Basic Button Styles*/
+    background-color: rgba(227, 227, 227, .85);
+
+    border: 0.1em solid rgba(74, 48, 32, 1);
+
+    border-radius: 1.3em;
+    color: #4A3020;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: .4em .1em;
+    cursor: pointer;
+    padding: 0.4em 0.6em;
+
+
+    /*Text Styles*/
+    font-family: 'Raleway', sans-serif;
+    /*font: 'Raleway', Arial, Helvetica, Geneva, sans-serif;
+*/
+}
+
+#systemClock {
+    /*Basic Button Styles*/
+    background-color: rgba(227, 227, 227, .85);
+
+    border: 0.1em solid rgba(74, 48, 32, 1);
+
+    border-radius: 3.5em;
+    color: #4A3020;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.4em 0.2em;
+    cursor: pointer;
+    padding: 0.7em 0.6em;
+
+
+    /*Text Styles*/
+    font-family: 'Raleway', sans-serif;
+    /*font: 'Raleway', Arial, Helvetica, Geneva, sans-serif;
+*/
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+#page {
+    text-align: center;
+}
+
+li {
+
+    display: inline;
+
+
+}
+
+
+.header {
+    padding: 0.7em 1em;
+    background: #4a3020;
+
+    background: linear-gradient(bottom, #eee, #e2e2e2), url("mike-kenneally-46284-unsplash.jpg") no-repeat center center;
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+#navigation {
+    overflow: hidden;
+    background: #e2e2e2;
+    z-index: 999;
+    font-size: 1em;
+
+
+}
+
+#navicon {
+    height: 2em;
+    width: 2em;
+    float: left;
+    padding: 1% 1%;
+
+    display: inline-block;
+}
+
+#navigation h2 {
+    color: black; /* Fallback: assume this color ON TOP of image */
+    background: url("mike-kenneally-46284-unsplash.jpg") no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    float: right;
+    display: inline-block;
+    text-shadow: none;
+    font-size: 1.6em;
+    text-align: center;
+    font-family: Lobster, sans-serif;
+    text-decoration: none;
+    padding: 1% 3% 1% 1%;
+}
+
+#navigation a {
+
+    text-align: center;
+    float: left;
+    display: inline-block;
+    color: #594431;
+
+    font-family: Lobster, sans-serif;
+    padding: 1% 1%;
+    text-decoration: none;
+    font-size: 2em;
+
+}
+
+#navigation a:hover {
+    background-color: #e2e2e2;
+    color: black;
+}
+
+#navigation a.active {
+
+    border-radius: 1em 1.3em 1.3em;
+    background: url("mike-kenneally-46284-unsplash.jpg") no-repeat;
+    padding: 1em;
+
+
+    color: white;
+}
+
+.content {
+    padding: 1em;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 0.5em;
+}
+
+
+/*Carousel Slider Settings*/
+.slider {
+    width: 75%;
+    height: 20em;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    line-height: 50em;
+    display: inline-block;
+
+
+}
+
+.slider > .radio {
+    display: none;
+}
+
+.slider > .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20em;
+    z-index: 1;
+
+    padding-right: 20em;
+}
+
+
+.slider > .radio:checked ~ .item {
+    transition: all .4s ease 0s;
+}
+
+.slider > .label {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    height: 100%;
+    width: 1em;
+    background-color: rgba(255, 255, 255, .5);
+    opacity: 0;
+    transition: opacity .2s ease 0s;
+}
+
+.slider:hover > .label {
+    opacity: 1;
+    transition: opacity .2s ease 0s;
+}
+
+/* indicators */
+.slider > .indicator {
+    position: relative;
+    display: inline-block;
+    bottom: 0.7em;
+    z-index: 5;
+    width: 0.8em;
+    height: 1em;
+    border-radius: 0.6em;
+    background-color: rgba(255, 255, 255, .5);
+    vertical-align: bottom;
+    line-height: 1;
+    opacity: 0;
+    transition: opacity .2s ease 0s;
+}
+
+.slider:hover > .indicator {
+    opacity: 1;
+    transition: opacity .2s ease 0s;
+}
+
+.slider > .indicator label {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* [ active slide item ] asterisks: slide.length - 1 */
+.slider > .radio:checked + * + * + * + * + .item {
+    left: 0;
+    z-index: 3;
+}
+
+/* [ previous slide item ] asterisks: slide.length - 2 */
+.slider > .radio:checked + * + * + * + .item,
+.slider > .radio:first-of-type:checked ~ .item:last-of-type {
+    left: -100%;
+    z-index: 2;
+}
+
+/* [ next slide item ] asterisks: slide.length */
+.slider > .radio:checked + * + * + * + * + * + .item,
+.slider > .radio:last-of-type:checked ~ .item:first-of-type {
+    left: 100%;
+    z-index: 2;
+}
+
+/* [ previous button ] asterisks: ( slide.length - 1 ) * 2 */
+.slider > .radio:checked + * + * + * + * + * + * + * + * + .label,
+.slider > .radio:first-of-type:checked ~ .label:last-of-type {
+    left: 0;
+    display: block;
+}
+
+/* [ next button ] asterisks: slide.length * 2 */
+.slider > .radio:checked + * + * + * + * + * + * + * + * + * + * + .label,
+.slider > .radio:last-of-type:checked ~ .label:first-of-type {
+    right: 0;
+    display: block;
+}
+
+/* [ active indicator ] asterisks: ( slide.length * 3 ) - 1 */
+.slider > .radio:checked + * + * + * + * + * + * + * + * + * + * + * + * + * + * + .indicator {
+    background-color: rgba(127, 127, 127, .5);
+}
+
+
+/* BUTTON STYLES */
+
+.button {
+    /*Basic Button Styles*/
+    background-color: rgba(227, 227, 227, .85);
+    border: 0.2em solid;
+    border-color: #4A3020;
+    border-radius: 1.9em;
+    color: #4A3020;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.5em;
+    margin: 0.5em 0.2em;
+    cursor: pointer;
+    padding: 0.4em 0.6em;
+
+
+    /*Text Styles*/
+    font-family: 'Lobster', sans-serif;
+    /*font: 'Lobster', Arial, Helvetica, Geneva, sans-serif;
+*/
+}
+
+.active-button {
+    /*Basic Button Styles*/
+    background-color: #4A3020;
+
+    border: 0.2em solid;
+    border-color: #4A3020;
+    border-radius: 1.9em;
+    color: #e2e2e2;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.5em;
+    margin: 0.5em 0.2em;
+    cursor: pointer;
+    padding: 0.4em 1em;
+    /*Text Styles*/
+    font-family: 'Lobster', sans-serif;
+    /*  font: 'Lobster', Arial, Helvetica, Geneva, sans-serif;
+  */
+}
+
+.button:hover {
+
+    box-shadow: 0 1em 1.1em 0 rgba(0, 0, 0, 0.25), 0 1.2em 2em 0 rgba(0, 0, 0, 0.10);
+    background: url("mike-kenneally-46284-unsplash.jpg") no-repeat;
+    color: #e2e2e2;
+}
+
+.active-button:hover {
+
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.25), 0 17px 50px 0 rgba(0, 0, 0, 0.10);
+    background: url("mike-kenneally-46284-unsplash.jpg") no-repeat;
+}
+
