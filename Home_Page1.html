@@ -152,7 +152,8 @@
     </div>
 
     <div id="navigation">
-        <a href=#navimage><img alt="" id="navicon" src="student_cafe3.png" style="width:80px; height:80px"></a>
+        <a href=#navimage onclick="audioFunction()"><img alt="" id="navicon" src="student_cafe5.png"
+                                                         style="width:80px; height:80px"></a>
         <h2 class="title-font">404 Coffee Place</h2>
         <a href="menu_page.html">
             <button class="button" type="button"> Menu</button>
@@ -179,7 +180,8 @@
         <div class="item" id="item02"><img alt="slide-image-02" id="caroImage2" src="crew-88126-unsplash.jpg"></div>
         <div class="item" id="item03"><img alt="slide-image-03" id="caroImage3" src="nathan-dumlao-264380-unsplash.jpg">
         </div>
-        <div class="item" id="item04"><img alt="slide-image-04" id="caroImage4" src="mike-kenneally-46284-unsplash.jpg">
+        <div class="item" id="item04"><img alt="slide-image-04" id="caroImage4"
+                                           src="daniel-norris-1404915-unsplash.jpg">
         </div>
         <div class="item" id="item05"><img alt="slide-image-05" id="caroImage5" src="kari-shea-188474-unsplash.jpg">
         </div>
@@ -235,6 +237,17 @@
 </div>
 
 <script>
+
+
+    //the audio variable and audioFunction are for the pouring sound that is heard when clicking the icon.
+    var audio = new Audio('pour1.mp3');
+
+    function audioFunction() {
+        audio.play();
+
+    }
+
+    //onScroll is for the navigation bar to remain stuck to the top
     window.onscroll = function () {
         myFunction()
     };
