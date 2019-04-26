@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="eg">
+
+<head>
+
+    <title>Subscribe Page 404 Coffee</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="CSS_Styles1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+
+    <style>
+
+        .submitForm {
+            background-color: transparent;
+            display: inline-block;
+
+        }
+
+        h2 {
+            text-align: center;
+            display: inline-block;
+            color: #594431;
+
+            font-family: Lobster, sans-serif;
+            padding: 1% 1%;
+            text-decoration: none;
+            font-size: 2em;
+        }
+
+        #submit {
+            background-color: rgba(227, 227, 227, .85);
+            border: 2px solid;
+            border-color: #4a3020;
+            border-radius: 100px;
+            color: brown;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 4px 2px;
+            cursor: pointer;
+            padding: 7.5px 168px;
+
+
+            /*Text Styles*/
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .submitFormButton {
+            /*Basic Button Styles*/
+            background-color: rgba(227, 227, 227, .85);
+            border: 2px solid;
+            border-color: #4a3020;
+            border-radius: 100px;
+            color: brown;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 4px 2px;
+            cursor: pointer;
+            padding: 7.5px 90px;
+
+
+            /*Text Styles*/
+            font-family: 'Raleway', sans-serif;
+        }
+
+
+        input:hover:invalid {
+
+
+            -o-background-size: contain;
+            -moz-background-size: contain;
+            -webkit-background-size: contain;
+            background-size: contain;
+
+        }
+
+        input:focus:valid {
+            background-color: rgb(220, 255, 220);
+
+            -o-background-size: contain;
+            -moz-background-size: contain;
+            -webkit-background-size: contain;
+            background-size: contain;
+        }
+
+        input:focus:invalid {
+            background-color: rgb(255, 220, 220);
+
+            -o-background-size: contain;
+            -moz-background-size: contain;
+            -webkit-background-size: contain;
+            background-size: contain;
+
+        }
+
+
+        #subscribePic {
+            border-radius: 50%;
+        }
+
+
+    </style>
+</head>
+
+<body onLoad=startTime()>
+
+<div id="page">
+
+    <div id="navigation">
+        <a href=#navimage onclick="audioFunction()"><img alt="" id="navicon" src="student_cafe5.png"></a>
+        <h2 class="title-font">404 Coffee Place</h2>
+        <a href="menu_page.html">
+            <button class="button" type="button"> Menu!</button>
+        </a>
+        <a href="Home_Page1.html">
+            <button class="button" type="button">Home!</button>
+        </a>
+        <a href="">
+            <button class="active-button" type="button">Subscribe!</button>
+        </a>
+    </div>
+
+    <br/>
+    <h2 class="">Subscribe to our mailing list to be informed of future deals!</h2>
+    <div>
+
+        <form class="submitForm" name="Form" onsubmit="validateForm()">
+            <table>
+                <tr>
+                    <td>
+                        <input class="submitFormButton" id="fName" name="fn" placeholder="*First Name"
+                               required="required" type="text">
+                    </td>
+                    <td>
+                        <input class="submitFormButton" id="email" name="email" placeholder="*Email Address"
+                               required="required" type="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="submitFormButton" id="post" name="postalCode"
+                               pattern="[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ][0-9][ABCEGHJKLMNPRSTVWXYZ][0-9"
+                               placeholder="*Postal Code">
+                    </td>
+                    <td>
+                        <input class="submitButton" id="submit" type="submit" value="Submit"/>
+                    </td>
+                </tr>
+            </table>
+            <img alt="Happy Girl Smiling" id="subscribePic" src="photo-1520206455633-f4f86d44a8a1.jpg">
+
+        </form>
+    </div>
+
+</div>
+
+<script>
+
+    function validateForm() {
+        alert("Thank you for signing up!");
+    }
+
+
+    //the audio variable and audioFunction are for the pouring sound that is heard when clicking the icon.
+    var audio = new Audio('pour1.mp3');
+
+    function audioFunction() {
+        audio.play();
+
+    }
+
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }
+        // add zero in front of numbers < 10
+        return i;
+    }
+</script>
+
+<footer id="foot">
+    <div class="copyright">
+        <p id="copyr">&copy 2019 - 404 Cafe</p>
+        <p>Last edited: April 25 2019</p>
+    </div>
+    <div class="social">
+        <a class="footerCross" href="Cross_Reference.html">Cross References</a>
+        <a class="footerExt" href="External_References.html">External References</a>
+
+    </div>
+</footer>
+
+</body>
+
+</html>

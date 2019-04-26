@@ -58,7 +58,6 @@
         * {
             box-sizing: border-box;
         }
-
         h2 {
             font: bold 2.5em Lobster, Verdana, sans-serif;
             text-shadow: -0.04em 0 #e2e2e2, 0 0.04em #e2e2e2, 0.04em 0 #e2e2e2, 0 -0.04em #e2e2e2;
@@ -75,21 +74,48 @@
         .column1 {
             float: left;
             width: 40.33%;
-            padding: 0.9em;
+
             border-color: #e2e2e2 #4A3020;
             border-width: 1.1em;
             color: black;
             border-style: double;
             border-radius: 11%;
             background: url("martin-211-unsplash.jpg");
+            padding-right: 0;
             object-fit: fill;
             font-family: Lobster, sans-serif;
             font-size: 1em;
             filter: grayscale(60%);
+            height: auto;
 
         }
 
         .column2 {
+            float: left;
+            width: 19.34%;
+            color: black;
+
+            object-fit: fill;
+            font-family: Lobster, sans-serif;
+            font-size: 1em;
+
+            height: auto;
+        }
+
+        .centerimages {
+            opacity: 0.55;
+            border: none;
+            float: left;
+            height: 50em;
+            width: 100%;
+            border-radius: 0.2em;
+            padding-top: 0em;
+            padding-bottom: 0em;
+            padding-left: 0em;
+
+        }
+
+        .column3 {
             float: right;
             width: 40.33%;
             padding: 0.9em;
@@ -103,12 +129,10 @@
             font-family: Lobster, sans-serif;
             font-size: 1em;
             filter: grayscale(60%);
-
+            height: auto;
         }
 
-        .middle {
-            background: url("nathan-dumlao-623124-unsplash.jpg");
-        }
+
 
         .text-center {
             text-align: center;
@@ -186,9 +210,9 @@
             <button class="active-button" type="button">Menu</button>
         </a>
         <a href="Home_Page1.html">
-            <button class="button" type="button">Our Story!</button>
+            <button class="button" type="button">Home !</button>
         </a>
-        <a href="https://www.starbucks.ca/">
+        <a href="subscribe_page.html">
             <button class="button" type="button">Subscribe</button>
         </a>
     </div>
@@ -201,78 +225,92 @@
                 <hr>
                 <ul>
                     <li>
-                        <img alt="Egg and Tomato" src="eiliv-sonas-aceron-1095887-unsplash.jpg"/><br>
+                        <img alt="Egg and Tomato" src="eiliv-sonas-aceron-1095887-unsplash.jpg"/><br/>
                         <h3>Egg and Tomato</h3>
-                        <p>Tomato and Egg on whole wheat bread</p>
+                        <p>The classic egg and Tomato Sandwich. Locally sourced ingredients at a great local price! A
+                            true Inner-city favourite! With additional toppings to suit your taste, served on a white or
+                            whole wheat: ciabatta, sourdough or rye bun!br/><br/></p><br/>
                         <hr>
                     </li>
 
 
                     <li>
-                        <img alt="Club" src="eaters-collective-197218-unsplash.jpg"/><br>
+                        <img alt="Club" src="eaters-collective-197218-unsplash.jpg"/><br/>
                         <h3>Club</h3>
-                        <p>Lorem ipsum dolor sit amet...</p>
+                        <p>Our Toasty home-made Club-Sandwich is sure fire way to start the day! Slow smoked ham, fresh
+                            field greens, and creamy Havarti cheese with additional toppings to suit your taste! Served
+                            on a white or whole wheat: ciabatta, sourdough, or rye bun!</p>
                     </li>
                     <hr>
 
                     <li>
-                        <img alt="Portabello Tomato" src="hans-vivek-368747-unsplash.jpg"/><br>
-                        <h3>Portabello Tomato Sandwich</h3>
-                        <p>Lorem ipsum dolor sit amet...</p>
+                        <img alt="Portabello Tomato" src="hans-vivek-368747-unsplash.jpg"/><br/>
+                        <h3>Portobello Tomato</h3>
+                        <p>Slow sautéed Portobello mushrooms, garlic, and onion in a savoury teriyaki seasoning. Served
+                            on top of full-cut field tomato slices. This home-made favourite is a best seller. With
+                            additional toppings to suit your taste, served on a white or whole wheat: ciabatta,
+                            sourdough, or rye bun!</p><br/>
                         <hr>
                     </li>
 
                     <li>
-                        <img alt="Grilled Cheese" src="pixzolo-photography-699069-unsplash.jpg"/><br>
+                        <img alt="Grilled Cheese" src="pixzolo-photography-699069-unsplash.jpg"/><br/>
                         <h3>Grilled Cheese</h3>
-                        <p>Chedder and mozzarella on grilled sourdough</p>
+                        <p>Every kid’s favourite! Our grilled cheese is 50% off for children under 12 years of age! A
+                            fresh selection of Cheddar, Monterey jack, and Havarti cheeses. Mix and match whatever you
+                            like! With additional toppings to suit your taste, served on white or whole wheat: ciabatta,
+                            sourdough, or rye bun!</p><br/>
                         <hr>
                     </li>
                 </ul>
             </div>
         </div>
-        <!--  <div class="column middle">
+        <div class="column2">
               <ul>
                   <li>
-                      <h2 class
-                      ="title2">Column 2</h2>
-                      <p id="personalInfo">some text
-                      <p>
+                      <img alt="leaves2" class="centerimages" src="zhen-hu-1099072-unsplash.jpg"/>
+                      <img alt="leaves2" class="centerimages" src="zhen-hu-1099072-unsplash2.jpg"/><br/>
+
                   </li>
               </ul>
-          </div>-->
-        <div class="column2">
+        </div>
+        <div class="column3">
             <div class="text-center">
-                <ul><h2>Drinks</h2>
+                <ul id="drinkList"><h2>Drinks</h2>
                     <hr>
                     <hr>
                     <li>
                         <img src="kristian-angelo-1414347-unsplash.jpg"/><br>
                         <h3>Vanilla Late</h3>
-                        <p>This cafe staple is made up of our signature espresso, creamy steamed milk, and french
-                            vanilla syrup.</p>
+                        <p>Our decadent vanilla is sourced straight from Madagascar, combined with locally sourced
+                            Canadian milk and steamed to perfection; this is the true vanilla latte. With a selection of
+                            sweeteners available: Organic cane sugar, agave, honey, and standard brand sweeteners</p>
+                        <hr>
                     </li>
-                    <hr>
 
                     <li>
                         <img src="kari-shea-188474-unsplash.jpg"/><br>
-                        <h3>Classic Mocha</h3>
-                        <p>Our mocha is composed of our signature espresso, creamy steamed milk, all mixed with half a
-                            cup of chocolate milk</p>
+                        <h3>Mocha Latte </h3>
+                        <p>Dark Belgian chocolate whipped and steamed with locally sourced Canadian milk; our Mocha
+                            Latte packs a chocolatey punch to take down those cravings! The perfect pick-me-up during a
+                            long night or rough morning! </p>
+                        <hr>
                     </li>
                     <li>
                         <img src="jason-leung-511996-unsplash.jpg"/><br>
-                        <h3>Classic Matcha</h3>
-                        <p>Our matcha is made of freshly stone-ground green tea leaves with methods that date back to
-                            the Tang dynasty</p><br>
+                        <h3>Matcha Latte</h3>
+                        <p>Fresh house-ground Matcha steamed with locally sourced Canadian Milk; This international
+                            favourite has been re-invented by our specialty baristas by utilizing home-grown Matcha.
+                            This latte is fresh and unexpected!</p><br>
                         <hr>
                     </li>
 
 
                     <li>
                         <img alt="Black Coffee" src="daniel-norris-1404915-unsplash.jpg"/><br>
-                        <h3>Americana coffee</h3>
-                        <p>Smooth Arabica that is sure to keep you coding!</p>
+                        <h3>Regular Coffee</h3>
+                        <p>Regular and Dark roast coffee’s in Arabica, Robusta, Liberica and Excelsa beans. Sourced from
+                            all around the world from the best producers. Come in and talk to us about our beans!</p>
                         <hr>
                     </li>
                 </ul>
@@ -343,6 +381,18 @@
         return i;
     }
 </script>
+<footer>
+    <div class="copyright">
+        <p>&copy 2019 - 404 Cafe</p>
+        <p>Last edited: April 25 2019</p>
+    </div>
+    <div class="social">
+        <a class="footerCross" href="Cross_Reference.html">Cross References</a>
+        <a class="footerExt" href="External_References.html">External References</a>
+
+    </div>
+</footer>
+
 </body>
 
 </html>
