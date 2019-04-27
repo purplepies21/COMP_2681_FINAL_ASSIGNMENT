@@ -2,6 +2,17 @@
 
 <html lang="en">
 
+<!--
+COMP2681 FINAL PROJECT
+404 Coffee Place
+Authors: Ashley Lindbergh, Devan Houston
+Date: April 26 2019
+
+Filename:         menu_page.html
+Supporting files: Home_Page1.html, subscribe_page.html, CSS_Styles1.css,
+nordwood-themes-483517-unsplash.jpg, martin-211-unsplash.jpg, eiliv-sonas-aceron-1095887-unsplash.jpg,
+kristian-angelo-1414347-unsplash.jpg, eaters-collective-197218-unsplash.jpg
+-->
 <head>
     <meta charset="utf-8">
 
@@ -17,6 +28,14 @@
 
     <style>
 
+
+        h1 {
+            font: bold 1.5em Lobster, Verdana, sans-serif;
+            text-shadow: -0.04em 0 #e2e2e2, 0 0.04em #e2e2e2, 0.04em 0 #e2e2e2, 0 -0.04em #e2e2e2;
+
+            color: #4a3020;
+            display: inline-block;
+        }
 
         ul {
             list-style-type: none;
@@ -73,12 +92,12 @@
 
         .column1 {
             float: left;
-            width: 40.33%;
+            width: 49.33%;
 
             border-color: #e2e2e2 #4A3020;
             border-width: 1.1em;
             color: black;
-            border-style: double;
+            border-style: groove;
             border-radius: 11%;
             background: url("martin-211-unsplash.jpg");
             padding-right: 0;
@@ -90,17 +109,7 @@
 
         }
 
-        .column2 {
-            float: left;
-            width: 19.34%;
-            color: black;
 
-            object-fit: fill;
-            font-family: Lobster, sans-serif;
-            font-size: 1em;
-
-            height: auto;
-        }
 
         .centerimages {
             opacity: 0.55;
@@ -117,12 +126,12 @@
 
         .column3 {
             float: right;
-            width: 40.33%;
+            width: 49.33%;
             padding: 0.9em;
             border-color: #e2e2e2 #4A3020;
             border-width: 1.1em;
             color: black;
-            border-style: double;
+            border-style: groove;
             border-radius: 11%;
             background: url("martin-211-unsplash.jpg");
             object-fit: fill;
@@ -166,14 +175,19 @@
 <body onload=startTime()>
 
 <div id="page">
+    <!--START OF HEADER-->
+    <!--The header for this page along with the menu page contains a system clock that states the date and a countdown to International Coffee day (October 1st)-->
+
     <div class="header">
 
+        <div id="systemClock"></div>
+        <hr>
         <!-- pour object doesnt work in firefox?-->
         <object data="pour1.ogg" height=0.8em id="audio" type="audio/ogg" width=1.5em>
 
             <param name="pour" value="pour1.ogg">
         </object>
-        <h2>Days until coffee day</h2><br>
+        <h2 style="color: #4a3020; font-size: 1.5em;">Days until coffee day:</h2>
         <p id="coffeeDayClock"></p>
 
         <script>
@@ -200,11 +214,14 @@
             }, 1000);
         </script>
         <br>
-        <div id="systemClock"></div>
     </div>
+    <!--END OF HEADER-->
+
+    <!--START OF NAVBAR-->
+    <!--Our navbar on the home page and menu page were made with the ability to stick to the top of the screen when you scroll past it.(using css and JS "onscroll")-->
 
     <div id="navigation">
-        <a href=#navimage><img alt="" id="navicon" src="student_cafe5.png"></a>
+        <a href="Home_Page1.html"><img alt="" id="navicon" src="student_cafe5.png"></a>
         <h2 class="title-font">404 Coffee Place</h2>
         <a href="menu_page.html">
             <button class="active-button" type="button">Menu</button>
@@ -216,7 +233,10 @@
             <button class="button" type="button">Subscribe</button>
         </a>
     </div>
+    <!--END OF NAVBAR-->
 
+    <!-- START OF MENU  -->
+    <!--Our menu contains 2 columns: Drinks and Sandwiches. Each menu item contains an image(img),  name(h3), and description(p). They are each seperated by a <hr> tag-->
     <div class="row">
         <div class="column1">
             <div class="text-center">
@@ -265,15 +285,6 @@
                 </ul>
             </div>
         </div>
-        <div class="column2">
-              <ul>
-                  <li>
-                      <img alt="leaves2" class="centerimages" src="zhen-hu-1099072-unsplash.jpg"/>
-                      <img alt="leaves2" class="centerimages" src="zhen-hu-1099072-unsplash2.jpg"/><br/>
-
-                  </li>
-              </ul>
-        </div>
         <div class="column3">
             <div class="text-center">
                 <ul id="drinkList"><h2>Drinks</h2>
@@ -317,8 +328,19 @@
             </div>
         </div>
     </div>
+    <!--END OF MENU-->
 </div>
 <script>
+    //the audio variable and audioFunction are for the pouring sound that is heard when clicking the icon.
+
+    var audio = new Audio('pour1.mp3');
+
+    function audioFunction() {
+        audio.play();
+
+    }
+
+    //onScroll is for the navigation bar to remain stuck to the top. This is used in the Home Page and Menu page. Was not necessary on the submit page
     window.onscroll = function () {
         myFunction()
     };
@@ -332,6 +354,10 @@
             navbar.classList.remove("sticky");
         }
     }
+
+    //END OF ONSCROLL SECTION
+
+    //START OF SYSTEM CLOCK FUNCTION: This function uses the date object to get the current date, time, and weekday.. We formatted it like this (Today is:SATURDAY, APRIL, THE 26TH)
 
     function startTime() {
         var today = new Date();
@@ -380,8 +406,13 @@
         // add zero in front of numbers < 10
         return i;
     }
+
+
 </script>
+<!--START OF FOOTER-->
+<!--The footer is pretty straight forward. It contains the copyright logo, the date it was last edited, and links to the cross-reference page and External Reference Page-->
 <footer>
+
     <div class="copyright">
         <p>&copy 2019 - 404 Cafe</p>
         <p>Last edited: April 25 2019</p>
@@ -392,6 +423,8 @@
 
     </div>
 </footer>
+<!--End of footer-->
+
 
 </body>
 

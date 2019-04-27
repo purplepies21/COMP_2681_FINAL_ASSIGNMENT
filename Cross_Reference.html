@@ -1,65 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Cross Reference 404 Coffee</title>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<link href="CSS_Styles1.css" rel="stylesheet">
+	<!--<link href="CSS_Styles1.css" rel="stylesheet">-->
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 
+	<style>
+
+		* {
+			box-sizing: border-box
+		}
+
+		/*h1 {
+            font: bold 2.5em Lobster, Verdana, sans-serif;
+            text-shadow: -0.04em 0 #e2e2e2, 0 0.04em #e2e2e2, 0.04em 0 #e2e2e2, 0 -0.04em #e2e2e2;
+
+            color: #4a3020;
+            display: inline-block;
+        }*/
+
+		.column {
+			float: left;
+			width: 33.33%;
+			padding: 0.9em;
+			border-color: #e2e2e2 #4A3020;
+			border-width: 1.1em;
+			color: black;
+			border-style: double;
+			border-radius: 11%;
+			/*background: url("martin-211-unsplash.jpg");
+            */
+			object-fit: fill;
+			font-family: Lobster, sans-serif;
+			font-size: 1em;
+			filter: grayscale(60%);
+			height: auto;
+		}
+
+		.column ol {
+			font-family: Raleway, sans-serif;
+			font-size: 1.5em;
+			/*	text-shadow: -0.04em 0 #4A3020, 0 0.04em #4A3020, 0.04em 0 #4A3020, 0 -0.04em #4A3020;
+            */
+			list-style: upper-alpha;
+
+		}
+
+		li a {
+			font-family: Raleway, sans-serif;
+			font-size: 1em;
+
+		}
+
+		.button {
+			/*Basic Button Styles*/
+			background-color: rgba(227, 227, 227, .85);
+			border: 0.2em solid;
+			border-color: #4A3020;
+			border-radius: 1.9em;
+			color: #4A3020;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 1.5em;
+			margin: 0.5em 0.2em;
+			cursor: pointer;
+			padding: 0.4em 0.6em;
+
+
+			/*Text Styles*/
+			font-family: 'Lobster', sans-serif;
+			/*font: 'Lobster', Arial, Helvetica, Geneva, sans-serif;
+        */
+		}
+
+		.button:hover {
+			/*Basic Button Styles*/
+			background-color: #4A3020;
+			border: 0.2em solid;
+			border-color: #4A3020;
+			border-radius: 1.9em;
+			color: #e2e2e2;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 1.5em;
+			margin: 0.5em 0.2em;
+			cursor: pointer;
+			padding: 0.4em 0.6em;
+
+
+			/*Text Styles*/
+			font-family: 'Lobster', sans-serif;
+			/*font: 'Lobster', Arial, Helvetica, Geneva, sans-serif;
+        */
+		}
+
+		#navigation h2 {
+			color: black; /* Fallback: assume this color ON TOP of image */
+			float: right;
+			display: inline-block;
+			text-shadow: none;
+			font-size: 2em;
+			text-align: center;
+			text-decoration: none;
+			font-kerning: auto;
+			letter-spacing: .15em;
+			line-height: normal;
+			text-indent: hanging;
+			font-weight: bold;
+			font-style: normal;
+			text-decoration: #4A3020;
+			text-transform: capitalize;
+			font-family: Lobster, sans-serif;
+			font-variant: all-petite-caps;
+
+		}
+
+		#navigation {
+			border-bottom: #557D90;
+			border-style: dashed;
+		}
+
+	</style>
 </head>
 <body>
 
-<style>
 
-	* {
-		box-sizing: border-box
-	}
+<div id="navigation">
 
-	h1 {
-		font: bold 2.5em Lobster, Verdana, sans-serif;
-		text-shadow: -0.04em 0 #e2e2e2, 0 0.04em #e2e2e2, 0.04em 0 #e2e2e2, 0 -0.04em #e2e2e2;
-
-		color: #4a3020;
-		display: inline-block;
-	}
-
-	.column {
-		float: left;
-		width: 33.33%;
-		padding: 0.9em;
-		border-color: #e2e2e2 #4A3020;
-		border-width: 1.1em;
-		color: black;
-		border-style: double;
-		border-radius: 11%;
-		background: url("martin-211-unsplash.jpg");
-		object-fit: fill;
-		font-family: Lobster, sans-serif;
-		font-size: 1em;
-		filter: grayscale(60%);
-		height: auto;
-	}
-
-	.column ol {
-		font-family: Raleway, sans-serif;
-		font-size: 0.9em;
-		color: #e2e2e2;
-		text-shadow: -0.04em 0 #4A3020, 0 0.04em #4A3020, 0.04em 0 #4A3020, 0 -0.04em #4A3020;
-		list-style: upper-alpha;
-
-	}
-
-	li a {
-		font-family: Raleway, sans-serif;
-		font-size: 0.8em;
-		color: #f0cf91;
-
-	}
-</style>
+	<h2 class="title-font">Cross References!</h2>
+	<a href="Home_Page1.html">
+		<button class="button" type="button"> Back To Site!</button>
+	</a>
+</div>
+<hr>
 <div class="column">
+
 
 	<h1>2.3.1 HTML5 Minimum Requirements Features</h1>
 <ol>
@@ -70,7 +151,7 @@
 	</li>
 
 	<li><p>Use of anchor references. </p>
-		<a href="Home_Page1.html#navImage">Our nav bar has 4 examples of anchor references</a>
+		<a href="Home_Page1.html#navigation">Our nav bar has 4 examples of anchor references</a>
 		<hr>
 	</li>
 
@@ -88,7 +169,7 @@
 	</li>
 
 	<li><p>Insert inline images and line breaks.</p>
-		<a href="Home_Page1.html#caroImage1">The image carousel on the home page has 5 inline images.</a>
+		<a href="Home_Page1.html#image1">The image carousel on the home page has 5 inline images.</a>
 		<hr>
 	</li>
 
@@ -143,7 +224,8 @@
 
 	<li><p>Use CSS3 to format the appearance of paragraphs, lists, headers, background images, tables, forms. Use the
 		following CSS3 contextual selectors (e1, e2, e3; e f; e > f; e + f in your web pages.</p><a
-			href="Home_Page1.html#caroimage1"></a>
+			href="CSS_Styles1.css"> We formatted the appearance of each of the above mentioned elements in our linked
+		CSS style sheet.</a>
 		<hr>
 	</li>
 
@@ -240,15 +322,19 @@
 		<hr>
 	</li>
 
-	<li><p>Apply appropriate styles to Web Forms.</p> <a href=""></a>
+	<li><p>Apply appropriate styles to Web Forms.</p> <a href="subscribe_page.html#submit">Our subscribe form is styled
+		to fit the theme of the website</a>
 		<hr>
 	</li>
 
-	<li><a href="">Validate form data using the required attribute.</a>
+	<li><p>Validate form data using the required attribute.</p><a href="subscribe_page.html#form1">The subscribe page
+		has a form submission with: name, email, and postal code all as required attributes for the form before
+		submission.</a>
 		<hr>
 	</li>
 
-	<li><a href="">Apply inline form validation by using the focus pseudo-class to appropriate form elements.</a>
+	<li><p>Apply inline form validation by using the focus pseudo-class to appropriate form elements.</p><a
+			href="subscribe_page.html">We used focus:valid and focus:invalid in order to validate forms.</a>
 		<hr>
 	</li>
 </ol>
@@ -257,7 +343,9 @@
 
 	<h1>2.3.4 Multimedia Minimum Required Features</h1>
 <ol>
-	<li><a href="">Use of object tag to enhance a web page with sound and video.</a>
+	<li><p>Use of object tag to enhance a web page with sound and video.</p><a href="menu_page.html">We used an object
+		tag for audio of coffee pouring when the menu page is opened. This does not work in FireFox but does work in
+		Chrome. We also have audio when you click the icon of the site using javascript and not the object tag.</a>
 		<hr>
 	</li>
 </ol>
@@ -266,8 +354,8 @@
 
 	<h1>2.3.5 Creating a Well-Formed, Valid Document</h1>
 <ol>
-	<li><a href="">Your home page should be well formed, valid web page under either transitional, strict XHTML DTD or
-		HTML5.</a>
+	<li><p>Your home page should be well formed, valid web page under either transitional, strict XHTML DTD or
+		HTML5.</p><a href="Home_Page1.html">All pages use proper formatting and are valid webpages with HTML5</a>
 		<hr>
 	</li>
 </ol>
@@ -276,28 +364,31 @@
 
 	<h1>2.3.6 JavaScript Minimum Required Features</h1>
 <ol>
-	<li><a href="Home_Page1.html">Use of variables, arithmetic, comparison and logical operators, subroutines,
-		functions, array, conditional statements, conditional operators, running time commands.</a>
-		<p>
-			The nav bar, image carousel, and subscribe page all include JS functions
-
-		</p>
+	<li><p>Use of variables, arithmetic, comparison and logical operators, subroutines,
+		functions, array, conditional statements, conditional operators, running time commands.</p>
+		<a href="Home_Page1.html">
+			The nav bar, image carousel, and subscribe page all include JS functions. The majority of our JS script can
+			be found at the bottom of each page with the exception of the coffee day clock which is at the top of the
+			body.
+		</a>
 		<hr>
 	</li>
 
-	<li><a href="menu_page.html#systemClock">Display system date on the home page of the web site.</a>
-		<p>
-			System date is shown at the top of the home page and menu page
+	<li><p>Display system date on the home page of the web site.</p>
+		<a href="menu_page.html#systemClock">
+			System date is shown at the top of the home page and menu page in the header.
 
-		</p>
+		</a>
 		<hr>
 	</li>
 
-	<li><a href="">Validating form input by using appropriate JavaScript functions.</a>
+	<li><p>Validating form input by using appropriate JavaScript functions.</p><a href="subscribe_page.html#post">The
+		postal form is validated using Canadian postal code formatting</a>
 		<hr>
 	</li>
 
-	<li><a href="">Use of JavaScript alerts for validation purposes.</a>
+	<li><p>Use of JavaScript alerts for validation purposes.</p><a href="subscribe_page.html#submit">After the form is
+		successfully submitted successfully, an alert pops up thanking the user for subscribing.</a>
 		<hr>
 	</li>
 </ol>

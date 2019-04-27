@@ -12,6 +12,10 @@
 
     <style>
 
+
+        * {
+            box-sizing: border-box;
+        }
         .submitForm {
             background-color: transparent;
             display: inline-block;
@@ -112,7 +116,9 @@
 <div id="page">
 
     <div id="navigation">
-        <a href=#navimage onclick="audioFunction()"><img alt="" id="navicon" src="student_cafe5.png"></a>
+
+        <!--This navbar is just like the ones on the other pages but does not scroll.-->
+        <a href="Home_Page1.html"><img alt="" id="navicon" src="student_cafe5.png"></a>
         <h2 class="title-font">404 Coffee Place</h2>
         <a href="menu_page.html">
             <button class="button" type="button"> Menu!</button>
@@ -126,10 +132,11 @@
     </div>
 
     <br/>
-    <h2 class="">Subscribe to our mailing list to be informed of future deals!</h2>
+    <h2 class="">Subscribe to our mail list and stay informed!</h2>
     <div>
-
-        <form class="submitForm" name="Form" onsubmit="validateForm()">
+        <!-- START OF SUBMISSION FORM -->
+        <!--This form contains 3 text inputs and a submission button. They are formatted for firstname, email address, and Canadian postal code respectively. If anything is inputted incorrectly, the form validation will ask for something to be redone.  -->
+        <form class="submitForm" id="form1" name="Form" onsubmit="validateForm()">
             <table>
                 <tr>
                     <td>
@@ -155,12 +162,14 @@
             <img alt="Happy Girl Smiling" id="subscribePic" src="photo-1520206455633-f4f86d44a8a1.jpg">
 
         </form>
+        <!-- END OF SUBMISSION FORM -->
     </div>
 
 </div>
 
 <script>
 
+    //this tiny function is called on the correct submission of the form
     function validateForm() {
         alert("Thank you for signing up!");
     }
@@ -183,6 +192,8 @@
         return i;
     }
 </script>
+<!--START OF FOOTER-->
+<!--The footer is pretty straight forward. It contains the copyright logo, the date it was last edited, and links to the cross-reference page and External Reference Page-->
 
 <footer id="foot">
     <div class="copyright">
@@ -195,6 +206,7 @@
 
     </div>
 </footer>
+<!--End of footer-->
 
 </body>
 

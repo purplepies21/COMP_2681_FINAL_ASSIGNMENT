@@ -1,5 +1,20 @@
 <!DOCTYPE html>
-<html lang="eg" xmlns:style="http://www.w3.org/1999/xhtml">
+<html lang="en">
+
+<!--
+
+COMP2681 FINAL PROJECT
+404 Coffee Place
+Authors: Ashley Lindbergh, Devan Houston
+Date: April 26 2019
+
+Filename:         Home_Page1.html
+Supporting files: menu_page.html, subscribe_page.html, CSS_Styles1.css,
+ matt-steele-1392296.jpg, gabriel-santos-1510754-unsplash.jpg,
+  takanori-nishikawa-1342007-unsplash.jpg, crew-88126-unsplash.jpg
+
+-->
+
 
 <head>
 
@@ -37,12 +52,11 @@
 
             float: left;
             width: 33.33%;
-            padding-left: 0.9em;
             padding: 0.9em;
             border-color: #e2e2e2 #4A3020;
             border-width: 1.1em;
             color: black;
-            border-style: double;
+            border-style: groove;
             border-radius: 11%;
             background: url("matt-steele-1392296-unsplash.jpg");
             object-fit: fill;
@@ -61,7 +75,7 @@
             border-color: #e2e2e2 #4A3020;
             border-width: 1.1em;
             color: black;
-            border-style: double;
+            border-style: groove;
             border-radius: 11%;
             background: url("gabriel-santos-1510754-unsplash.jpg");
             object-fit: fill;
@@ -80,7 +94,7 @@
             border-color: #e2e2e2 #4A3020;
             border-width: 1.1em;
             color: black;
-            border-style: double;
+            border-style: groove;
             border-radius: 11%;
             background: url("takanori-nishikawa-1342007-unsplash.jpg");
             object-fit: fill;
@@ -165,6 +179,13 @@
             }
         }
 
+        .jumptarget:before {
+            content: "";
+            display: block;
+            height: 220px; /* fixed header height*/
+            margin: -50% 0 0; /* negative fixed header height */
+        }
+
 
 
 
@@ -172,15 +193,16 @@
 </head>
 
 <body onLoad=startTime()>
-
 <div id="page">
+    <!--START OF HEADER-->
+    <!--The header for this page along with the menu page contains a system clock that states the date and a countdown to International Coffee day (October 1st)-->
+
     <div class="header">
 
         <div id="systemClock"></div>
         <hr/>
         <h1 id="h1Inline" style="color: #4a3020;">Days until Coffee day:</h1>
         <p id="coffeeDayClock"></p>
-    </div>
         <script>
             <!--
             //   CoffeeDay;
@@ -212,7 +234,10 @@
         </script>
 
     </div>
+    <!--END OF HEADER-->
 
+    <!--START OF NAVBAR-->
+    <!--Our navbar on the home page and menu page were made with the ability to stick to the top of the screen when you scroll past it.(using css and JS "onscroll")-->
     <div id="navigation">
         <a href=#navimage onclick="audioFunction()"><img alt="" id="navicon" src="student_cafe5.png"></a>
         <h2 class="title-font" id="hometitle">404 Coffee Place</h2>
@@ -226,68 +251,75 @@
             <button class="button" type="button">Subscribe</button>
         </a>
     </div>
+    <!--END OF NAVBAR-->
 
-<br/>
-    <!--IMAGE CAROUSEL-->
-<div class="carContainer">
-    <div class="slider1 fade">
-        <img class="carImage" id="image1" src="crew-88126-unsplash.jpg" style="width:100%">
+    <br/>
+    <!--START OF IMAGE CAROUSEL-->
+    <!--After several attempts at creating a CSS and HTML only carousel, we settled on this one that uses significantly less CSS code and automatically scrolls through the carousel every 3 seconds. -->
+    <div class="carContainer">
+        <div class="slider1 fade">
+            <img class="carImage" id="image1" src="crew-88126-unsplash.jpg" style="width:100%">
+        </div>
+
+        <div class="slider1 fade">
+            <img class="carImage" src="charisse-kenion-314533-unsplash.jpg" style="width:100%">
+        </div>
+        <div class="slider1 fade">
+            <img class="carImage" src="crew-88126-unsplash.jpg" style="width:100%">
+        </div>
+        <div class="slider1 fade">
+            <img class="carImage" src="nathan-dumlao-264380-unsplash.jpg" style="width:100%">
+        </div>
+
+
     </div>
 
-    <div class="slider1 fade">
-        <img class="carImage" src="charisse-kenion-314533-unsplash.jpg" style="width:100%">
+    <br>
+
+    <div style="text-align:center">
+        <span class="carDot"></span>
+        <span class="carDot"></span>
+        <span class="carDot"></span>
+        <span class="carDot"></span>
+        <span class="carDot"></span>
     </div>
-    <div class="slider1 fade">
-        <img class="carImage" src="crew-88126-unsplash.jpg" style="width:100%">
-    </div>
-    <div class="slider1 fade">
-        <img class="carImage" src="nathan-dumlao-264380-unsplash.jpg" style="width:100%">
-    </div>
 
+    <!--END OF IMAGE CAROUSEL-->
 
-</div>
+    <script>//THIS FUNCTION AND slideIndex variable are for the CAROUSEL. They slide through each of the 5 images and set the dot that is associated with the image to active.
+    var slideIndex = 0;
+    showSlides();
 
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("slider1");
+        var dots = document.getElementsByClassName("carDot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 5000);
+    }</script>
+    <br/>
+    <br/>
 
-<br>
-
-<div style="text-align:center">
-    <span class="carDot"></span>
-    <span class="carDot"></span>
-    <span class="carDot"></span>
-    <span class="carDot"></span>
-    <span class="carDot"></span>
-</div>
-<script>//THIS FUNCTION AND slideIndex variable are for the CAROUSEL
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("slider1");
-    var dots = document.getElementsByClassName("carDot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 5000);
-}</script>
-<br/>
-
-
+    <!--START OF DETAILS and OUR STORY section-->
+    <!--This section contains 3 columns (each with a seperate background image) that each describe aspects of the business.-->
+    <h2 class="jumptarget" id="ourstory" style="font-size: 2em; ">Our Story!</h2>
     <div class="row">
         <div class="column1">
             <div class="text-center">
                 <ul>
                     <li>
-                        <h2 class="title2" id="ourstory"><span class="firstchar">F</span>ocus!</h2>
+                        <h2 class="title2" id="focus"><span class="firstchar">F</span>ocus!</h2>
                         <p class="descrip">We are a youth-oriented organization who enhances business productivity
                             through coffee accessibility all day and night!
                             We’re up 24 hours a day brewing world class coffee in all major cities and offer business
@@ -318,16 +350,16 @@ function showSlides() {
                         <p class="descrip">Every October 1st is International Coffee Day! A day for celebration,
                             togetherness, and charity! Here at 404 Coffee and on the first of
                             every October we host a grand charity sale! All coffees (raw or ground bean) are 75% off!
-                            With 50% of all purchase prices going to Breast Cancer Research!<br/><br/>
+                            With 50% of all purchase prices going to Breast Cancer Research!
                         </p>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+    <!--END OF DETAILS and OUR STORY section-->
 </div>
 
-</div>
 
 <script>
 
@@ -340,7 +372,8 @@ function showSlides() {
 
     }
 
-    //onScroll is for the navigation bar to remain stuck to the top
+
+    //onScroll is for the navigation bar to remain stuck to the top. This is used in the Home Page and Menu page. Was not necessary on the submit page
     window.onscroll = function () {
         myFunction()
     };
@@ -356,6 +389,10 @@ function showSlides() {
         }
     }
 
+    //END OF ONSCROLL SECTION
+
+
+    //START OF SYSTEM CLOCK FUNCTION: This function uses the date object to get the current date, time, and weekday.. We formatted it like this (Today is:SATURDAY, APRIL, THE 26TH)
     function startTime() {
         var today = new Date();
         var hour = today.getHours();
@@ -411,8 +448,8 @@ function showSlides() {
         }
 
         document.getElementById('systemClock').innerHTML = "Today is: " + weekdayArray[weekday] + ", " + monthArray[monthDay] + ", the " + dateSuffix + "!";
-        "Hr: " + hour + " Min: " + min + " Sec: " + sec + " Date: ";
-        var today = setTimeout(startTime, 500);
+        /*"Hr: " + hour + " Min: " + min + " Sec: " + sec + " Date: ";*/
+        /* var today = setTimeout(startTime, 500);*/
     }
 
     function checkTime(i) {
@@ -426,7 +463,8 @@ function showSlides() {
 
 </script>
 
-
+<!--START OF FOOTER-->
+<!--The footer is pretty straight forward. It contains the copyright logo, the date it was last edited, and links to the cross-reference page and External Reference Page-->
 <footer id="foot">
     <div class="copyright">
         <p id="copyr">&copy 2019 - 404 Cafe</p>
@@ -438,6 +476,7 @@ function showSlides() {
 
     </div>
 </footer>
+<!--End of footer-->
 
 </body>
 
